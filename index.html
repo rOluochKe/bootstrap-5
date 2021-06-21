@@ -6,6 +6,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
         <link href='./style.css'>
         <title>Bootstrap 5</title>
     </head>
@@ -326,7 +327,51 @@
             </div>
         </section>
 
+        <section class="p-5">
+            <div class="container">
+              <div class="row g-4">
+                <div class="col-md">
+                  <h2 class="text-center mb-4">Contact Info</h2>
+                  <ul class="list-group list-group-flush lead">
+                    <li class="list-group-item">
+                      <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+                    </li>
+                    <li class="list-group-item">
+                      <span class="fw-bold">Enrollment Phone:</span> (555) 555-5555
+                    </li>
+                    <li class="list-group-item">
+                      <span class="fw-bold">Student Phone:</span> (333) 333-3333
+                    </li>
+                    <li class="list-group-item">
+                      <span class="fw-bold">Enrollment Email:</span> (555)
+                      enroll@frontendbc.test
+                    </li>
+                    <li class="list-group-item">
+                      <span class="fw-bold">Student Email:</span>
+                      student@frontendbc.test
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md">
+                  <div id="map" class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="546" height="296" style="width: 546px; height: 296px;"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact"><button class="mapboxgl-ctrl-attrib-button" title="Toggle attribution" aria-label="Toggle attribution"></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox" role="listitem">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap" role="listitem">© OpenStreetMap</a> <a href="https://www.mapbox.com/map-feedback/" target="_blank" title="Improve this map" aria-label="Improve this map" role="listitem">Improve this map</a></div></div></div></div></div>
+                </div>
+              </div>
+            </div>
+        </section>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+        <script>
+          mapboxgl.accessToken =
+            'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-71.060982, 42.35725],
+            zoom: 18,
+          })
+        </script>
     </body>
 </html>
